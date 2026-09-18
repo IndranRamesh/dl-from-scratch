@@ -47,8 +47,8 @@ def binary_cross_entropy(y_train,y_pred):
     # It's used to avoid the log of 0
     
     # loss function
-    loss = -np.mean(y_train * np.log(y_pred) + (1-y_train) * np.log(1-y_pred))
     # loss = -np.mean(y_train * np.log(y_pred) + (1-y_train) * np.log(1-y_pred))
+    loss = -np.mean(y_train * np.log(y_pred) + (1-y_train) * np.log(1-y_pred))
     # this is the binary cross entropy loss function , 
     # it is used to calculate the loss 
     # between the predicted values and the actual values
