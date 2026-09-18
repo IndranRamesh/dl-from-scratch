@@ -1,4 +1,5 @@
 
+from _typeshed import _type_checker_internals
 import numpy as np 
 # 1 . Create a simple binary classification problem 
 rng = np.random.default_rng(42)
@@ -25,7 +26,7 @@ def binary_cross_entropy(_train,y_pred):
 
     return -np.mean(
         y_train * np.log(y_pred)
-        + (1 - y) * np.log( 1 - y_pred)
+        + (1 - y_train) * np.log( 1 - y_pred)
     )
 
 loss = binary_cross_entropy(y_train,y_pred)
